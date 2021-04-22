@@ -8,10 +8,9 @@ const app = express();
 const notFound = require('../src/error-handlers/404');
 const internalError = require('../src/error-handlers/500');
 const logger = require('./middleware/logger');
-// const validator = require('./middleware/validator');
+// const validator = require('./middleware/validator'); needed?
 const clothRoutes = require('./routes/clothes');
 const foodRoutes = require('./routes/food');
-
 
 // global middleware
 app.use(express.json()); // handles parsing of req.body
@@ -28,9 +27,9 @@ app.use(internalError);
 // export module for index.js
 module.exports = {
   server: app,
-  start: port => {
+  start: (port) => {
     app.listen(port, () => {
       console.log(`server up on port ${port}`);
     });
-  }
-}
+  },
+};

@@ -2,7 +2,7 @@
 
 const express = require('express');
 
-// pull in food model, instantiate 
+// pull in food model, instantiate
 const Food = require('../models/food');
 const foods = new Food();
 
@@ -38,14 +38,13 @@ function updateFood(req, res) {
   let content = req.body;
   const id = parseInt(req.params.id);
   let updated = foods.update(id, content);
-  res.status(201).json(updated);
-
+  res.status(200).json(updated);
 }
 
 function deleteFood(req, res) {
   const id = parseInt(req.params.id);
   let deleted = foods.delete(id);
-  res.status(201).json(deleted);
+  res.status(200).json(deleted);
 }
 
 module.exports = router;

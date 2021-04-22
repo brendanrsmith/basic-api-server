@@ -38,14 +38,14 @@ function updateCloth(req, res) {
   let content = req.body;
   const id = parseInt(req.params.id);
   let updated = clothes.update(id, content);
-  res.status(201).json(updated);
+  res.status(200).json(updated);
 
 }
 
 function deleteCloth(req, res) {
   const id = parseInt(req.params.id);
   let deleted = clothes.delete(id);
-  res.status(201).json(deleted);
+  res.status(200).json(deleted);
 }
 
 module.exports = router;
