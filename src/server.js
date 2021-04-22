@@ -10,6 +10,7 @@ const internalError = require('../src/error-handlers/500');
 const logger = require('./middleware/logger');
 // const validator = require('./middleware/validator');
 const clothRoutes = require('./routes/clothes');
+const foodRoutes = require('./routes/food');
 
 
 // global middleware
@@ -17,6 +18,7 @@ app.use(express.json()); // handles parsing of req.body
 
 app.use(logger);
 app.use(clothRoutes);
+app.use(foodRoutes);
 
 // catch-all 404 handler
 app.use('*', notFound);
