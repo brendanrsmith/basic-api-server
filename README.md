@@ -8,7 +8,7 @@
 
 - [ci/cd](https://github.com/brendigler/basic-api-server/actions)
 - [server url](https://brsmith-basic-api-server.herokuapp.com/)
-<!-- - [Pull Request]() -->
+- [Pull Request](https://github.com/brendigler/basic-api-server/pull/1)
 
 ### Setup
 
